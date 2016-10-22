@@ -26,7 +26,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   $stateProvider
 
   /* Initial route */
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -34,11 +34,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
   /* Sarah routes */
-  .state('app.home', {
+  .state('app.login', {
     url: '/home',
     views: {
       'menuContent': {
         templateUrl: 'templates/home.html'
+      }
+    }
+  })
+
+  .state('app.dashboard', {
+    url: '/dashboard',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/dashboard.html'
       }
     }
   })
