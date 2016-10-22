@@ -39,6 +39,31 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+})
+
+
+.controller('LogoutCtrl', function($scope, $ionicModal, $timeout) {
+
+  $ionicModal.fromTemplateUrl('templates/logout.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  $scope.logout = function() {
+    $scope.modal.show();
+  }
+
+  $scope.doLogout = function() {
+    console.log('Doing logout');
+
+    // Redirect to home page
+  }
+
+  $scope.closeLogout = function() {
+    $scope.modal.hide();
+  }
 })
 
 .controller('PlaylistsCtrl', function($scope) {
