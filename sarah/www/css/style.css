@@ -13,6 +13,15 @@
   color: #000;
 }
 
+.login-card {
+  margin-left:25%;
+  margin-right:25%;
+}
+
+.list-logout .item, .list-logout .item-content, .list-logout .item-complex {
+  border-color: transparent;
+}
+
 
 /* Jiannine CSS */
 .wrapper {

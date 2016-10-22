@@ -6,13 +6,16 @@
     </div>
   </ion-header-bar>
   <ion-content>
-    <form ng-submit="doLogout()">
-      <div class="list">
-        <p>Are you sure you want to log out?</p>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Yes</button>
-        </label>
+    <div class="list list-inset list-logout">
+      <div class="item item-content">
+        <!--<div class="logout">-->
+        Are you sure you want to log out?
       </div>
-    </form>
+        <div class="item item-content">
+          <button class="button button-dark" ng-click="doLogout()">Yes</button>
+          <button class="button button-outline button-dark" ng-click="closeLogout()">No</button>
+        </div>
+      </div>
+
   </ion-content>
 </ion-modal-view>

@@ -35,10 +35,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   /* Sarah routes */
   .state('app.login', {
-    url: '/home',
+    url: '/login',
     views: {
       'menuContent': {
-        templateUrl: 'templates/home.html'
+        templateUrl: 'templates/login.html'
       }
     }
   })
@@ -125,5 +125,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/app/login');
 });
