@@ -15,7 +15,11 @@
 
 
 /* Jiannine CSS */
-#donations-container {
+.wrapper {
+
+}
+
+/* #donations-container {
   border: 1px solid black;
   width: 10%;
   float: left;
@@ -23,7 +27,7 @@
 }
 
 #taskbar {
-}
+} */
 
 li {
   list-style: none;
@@ -31,11 +35,8 @@ li {
 }
 
 #commands {
-  border: 1px solid black;
-  width: 40%;
-  float: left;
-  margin-left: 2em;
-  margin-right: 2em;
+  /*border: 1px solid black;*/
+  text-align: center;
 }
 
 #right-contain {
@@ -44,21 +45,76 @@ li {
   float: left;
   padding: 0.5em;
 }
-
 #command-desc {
-  border:1px solid blue;
+ /*border:1px solid blue;*/
 }
 
 #notes {
-  border: 1px solid red;
+ /*border: 1px solid red;*/
 }
 
 #last-edited {
-  border: 1px solid black;
+ /*border: 1px solid black;*/
 }
 
 #command-desc,
-#notes,
-#last-edited {
-  margin-bottom: 1em;
+#campaign-desc,
+.notes,
+.last-edited {
+ /*margin-bottom: 1em;*/
+ padding: 1em;
+}
+
+.totals {
+ text-align: center;
+}
+
+
+@media screen and (min-width: 577px) {
+ #commands {
+   float: left;
+   max-width: 30%;
+   text-align: center;
+ }
+ #command-desc {
+   float: right;
+   width: 60%;
+ }
+ #campaign-desc {
+   width: 80%;
+   padding: 1em;
+ }
+ .notes,
+ .last-edited {
+   clear: both;
+ }
+ .totals {
+   width: 35%;
+   text-align: center;
+ }
+}
+
+@media screen and (min-width: 768px) {
+ #commands {
+   float: left;
+   max-width: 15%;
+   text-align: center;
+ }
+ #command-desc {
+   float: right;
+   width: 80%;
+   padding: 2.5em;
+ }
+ #campaign-desc {
+   width: 80%;
+   padding: 2.5em;
+ }
+ .notes,
+ .last-edited {
+   clear: both;
+ }
+ .totals {
+   width: 30%;
+   text-align: center;
+ }
 }
