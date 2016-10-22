@@ -24,23 +24,32 @@
 
 
 /* Jiannine CSS */
-.wrapper {
-
+.selected {
+  background-color: #bdc3c7;
+  -moz-box-shadow:    inset 0 0 10px #777;
+  -webkit-box-shadow: inset 0 0 10px #777;
+  box-shadow:         inset 0 0 10px #777;
 }
 
-/* #donations-container {
-  border: 1px solid black;
-  width: 10%;
-  float: left;
-  box-sizing: border-box;
+#reply-manager,
+#total-header {
+  text-align: center;
+  background-color: #69b3b7;
+  color: #fff;
 }
-
-#taskbar {
-} */
 
 li {
   list-style: none;
   padding: 0.5em 0;
+}
+
+#btn-container {
+  text-align: right;
+}
+
+#edit-btn {
+  background-color: #69b3b7;
+  width: 100px;
 }
 
 #commands {
@@ -54,76 +63,125 @@ li {
   float: left;
   padding: 0.5em;
 }
+
 #command-desc {
- /*border:1px solid blue;*/
+  /*border:1px solid blue;*/
 }
 
 #notes {
- /*border: 1px solid red;*/
+  /*border: 1px solid red;*/
 }
 
 #last-edited {
- /*border: 1px solid black;*/
+  /*border: 1px solid black;*/
+}
+
+#live-count {
+  width: 100%;
 }
 
 #command-desc,
 #campaign-desc,
 .notes,
 .last-edited {
- /*margin-bottom: 1em;*/
- padding: 1em;
+  /*margin-bottom: 1em;*/
+  padding: 1em;
 }
 
 .totals {
- text-align: center;
+  text-align: center;
 }
 
 
-@media screen and (min-width: 577px) {
- #commands {
-   float: left;
-   max-width: 30%;
-   text-align: center;
- }
- #command-desc {
-   float: right;
-   width: 60%;
- }
- #campaign-desc {
-   width: 80%;
-   padding: 1em;
- }
- .notes,
- .last-edited {
-   clear: both;
- }
- .totals {
-   width: 35%;
-   text-align: center;
- }
+
+@media screen and (min-width: 576px) {
+  #commands {
+    float: left;
+    max-width: 30%;
+    text-align: center;
+  }
+  #command-desc {
+    float: right;
+    width: 60%;
+  }
+  #campaign-desc {
+    width: 50%;
+    padding: 1em;
+  }
+  #live-count {
+    width: 30%;
+    padding: 0.5em;
+  }
+  .notes,
+  .last-edited {
+    clear: both;
+  }
+  .totals {
+    width: 45%;
+    text-align: center;
+  }
+  #dash-row2 {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  #top-searches {
+    width: 60%;
+    margin: auto;
+  }
+  #db-btn {
+    margin: 1em auto;
+  }
+  #new-keywords {
+    width: 50%;
+    text-align: center;
+  }
+  #new-descrip {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 768px) {
- #commands {
-   float: left;
-   max-width: 15%;
-   text-align: center;
- }
- #command-desc {
-   float: right;
-   width: 80%;
-   padding: 2.5em;
- }
- #campaign-desc {
-   width: 80%;
-   padding: 2.5em;
- }
- .notes,
- .last-edited {
-   clear: both;
- }
- .totals {
-   width: 30%;
-   text-align: center;
- }
+  #row1-wrap,
+  #row2-wrap {
+    max-width: 80%;
+    margin: auto;
+  }
+  #commands {
+    float: left;
+    max-width: 25%;
+    text-align: center;
+  }
+  #command-desc {
+    float: right;
+    width: 75%;
+    padding: 3em;
+  }
+  #campaign-desc {
+    width: 70%;
+    padding: 2.5em;
+  }
+  #live-count {
+    width: 40%;
+    margin: auto;
+  }
+  #internal-notes {
+    width: 100%;
+  }
+  .notes,
+  .last-edited {
+    clear: both;
+  }
+  .totals {
+    width: 50%;
+    text-align: center;
+  }
+  #campaign-desc,
+  #live-count,
+  .totals {
+    display: inline-block;
+  }
+  #top-searches {
+    width: 30%;
+    margin: auto;
+  }
 }
