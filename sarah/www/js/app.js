@@ -25,6 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+  /* Initial route */
     .state('app', {
     url: '/app',
     abstract: true,
@@ -32,6 +33,81 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
+  /* Sarah routes */
+  .state('app.analytics', {
+    url: '/analytics',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/analytics.html'
+      }
+    }
+  })
+
+  .state('app.io', {
+    url: '/io',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/io.html'
+      }
+    }
+  })
+
+  .state('app.io-reply', {
+    url: '/io/reply',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/io-reply.html'
+      }
+    }
+  })
+
+  .state('app.io-donations', {
+    url: '/io/donations',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/io-donations.html'
+      }
+    }
+  })
+
+  .state('app.io-check-in', {
+    url: '/io/check-in',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/io-check-in.html'
+      }
+    }
+  })
+
+  .state('app.io-events', {
+    url: '/io/events',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/events.html'
+      }
+    }
+  })
+
+  .state('app.io-languages', {
+    url: '/io/languages',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/languages.html'
+      }
+    }
+  })
+
+  .state('app.profile', {
+    url: '/profile',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/profile.html'
+      }
+    }
+  })
+
+
+  /* Default routes */
   .state('app.search', {
     url: '/search',
     views: {
