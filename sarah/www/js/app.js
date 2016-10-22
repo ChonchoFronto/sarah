@@ -34,6 +34,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
   /* Sarah routes */
+  .state('app.home', {
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html'
+      }
+    }
+  })
+
   .state('app.analytics', {
     url: '/analytics',
     views: {
@@ -106,44 +115,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-
-  /* Default routes */
-  /*.state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  }); */
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/profile');
+  $urlRouterProvider.otherwise('/app/home');
 });
