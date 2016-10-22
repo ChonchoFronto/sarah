@@ -16,41 +16,39 @@
     <ion-header-bar class="bar-stable">
       <h1 class="title">Left</h1>
     </ion-header-bar>
-    <ion-content>
-      <ion-list>
+    <ion-content class="my-menu">
+      <ion-list class="list">
         <!--<ion-item menu-close ng-click="login()">
-          Login
-        </ion-item> -->
-        <ion-item menu-close href="#/app/home">
-          Home
-        </ion-item>
-        <ion-item menu-close href="#/app/io">
-          Reply Manager
-          <ion-list>
-            <ion-item menu-close href="#/app/io/help">
-              Help Responses
-            </ion-item>
-            <ion-item menu-close href="#/app/io/donations">
-              Donation Responses
-            </ion-item>
-            <ion-item  menu-close href="#/app/io/recurring">
-              Recurring
-            </ion-item>
-            <ion-item  menu-close href="#/app/io/events">
-              Events
-            </ion-item>
-            <ion-item  menu-close href="#/app/io/languages">
-              Languages
-            </ion-item>
-          </ion-list>
-        </ion-item>
-        <ion-item menu-close href="#/app/analytics">
-          Analytics
-        </ion-item>
-        <ion-item menu-close href="#/app/profile">
-          Sarah's Profile
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-side-menu>
+        Login
+      </ion-item> -->
+      <ion-item menu-close href="#/app/home">
+        Home
+      </ion-item>
+      <ion-item menu-close href="#/app/io">
+        Reply Manager
+      </ion-item>
+      <ion-item nav-clear menu-close class="submenu" href="#/app/io/help">
+        <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Help Responses
+      </ion-item>
+      <ion-item nav-clear menu-close href="#/app/io/donations">
+        <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Donation Responses
+      </ion-item>
+      <ion-item  nav-clear menu-close href="#/app/io/recurring">
+        <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Recurring
+      </ion-item>
+      <ion-item  nav-clear menu-close href="#/app/io/events">
+        <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Events
+      </ion-item>
+      <ion-item  nav-clear menu-close href="#/app/io/languages">
+        <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Languages
+      </ion-item>
+      <ion-item nav-clear menu-close href="#/app/analytics">
+        Analytics
+      </ion-item>
+      <ion-item nav-clear menu-close href="#/app/profile">
+        Sarah's Profile
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-side-menu>
 </ion-side-menus>

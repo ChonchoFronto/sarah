@@ -1,1 +1,64 @@
 /* Empty. Add your own CSS if you like */
+/* Lindsay CSS */
+.my-menu {
+  background-color: #ffffff ;
+}
+
+.my-menu .list {
+  background-color: transparent;
+}
+
+.my-menu .item, .my-menu .item-content, .my-menu .item-complex{
+  background-color: transparent;
+  color: #000;
+}
+
+
+/* Jiannine CSS */
+#donations-container {
+  border: 1px solid black;
+  width: 10%;
+  float: left;
+  box-sizing: border-box;
+}
+
+#taskbar {
+}
+
+li {
+  list-style: none;
+  padding: 0.5em 0;
+}
+
+#commands {
+  border: 1px solid black;
+  width: 40%;
+  float: left;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+#right-contain {
+  border: 1px solid black;
+  width: 25%;
+  float: left;
+  padding: 0.5em;
+}
+
+#command-desc {
+  border:1px solid blue;
+}
+
+#notes {
+  border: 1px solid red;
+}
+
+#last-edited {
+  border: 1px solid black;
+}
+
+#command-desc,
+#notes,
+#last-edited {
+  margin-bottom: 1em;
+}
