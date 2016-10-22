@@ -52,11 +52,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.io-reply', {
-    url: '/io/reply',
+  .state('app.io-help', {
+    url: '/io/help',
     views: {
       'menuContent': {
-        templateUrl: 'templates/io-reply.html'
+        templateUrl: 'templates/io-help.html'
       }
     }
   })
@@ -70,11 +70,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.io-check-in', {
-    url: '/io/check-in',
+  .state('app.io-recurring', {
+    url: '/io/recurring',
     views: {
       'menuContent': {
-        templateUrl: 'templates/io-check-in.html'
+        templateUrl: 'templates/io-recurring.html'
       }
     }
   })
@@ -108,7 +108,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
   /* Default routes */
-  .state('app.search', {
+  /*.state('app.search', {
     url: '/search',
     views: {
       'menuContent': {
@@ -143,7 +143,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
-  });
+  }); */
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/profile');
 });
