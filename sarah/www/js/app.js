@@ -101,7 +101,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/io/events',
     views: {
       'menuContent': {
-        templateUrl: 'templates/events.html'
+        templateUrl: 'templates/io-events.html'
       }
     }
   })
@@ -110,7 +110,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/io/languages',
     views: {
       'menuContent': {
-        templateUrl: 'templates/languages.html'
+        templateUrl: 'templates/io-languages.html'
       }
     }
   })
