@@ -109,4 +109,32 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+
+.controller('OptionsCtrl', function($scope) {
+    $scope.settings = [
+        { icon: 'ion-ios-search', title: "Search"},
+        { icon: 'ion-gear-b', title: "Settings"},
+        { icon: 'ion-power', title: "Log Out"}
+    ]
+})
+
+.controller('ReplyCtrl', function($scope) {
+  $scope.commands = [
+    {title: 'Employment', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.'},
+    {title: 'Foodbank', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+    {title: 'Housing', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
+    {title: 'Legal', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+    {title: 'Safety', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
+    {title: 'Volunteer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}];
+
+  $scope.selectedCommand = {
+    title: '',
+    description: ''
+  }
+
+  $scope.edit = function(command) {
+    $scope.selectedCommand = command;
+  }
 });

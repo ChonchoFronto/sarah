@@ -74,7 +74,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/io/help',
     views: {
       'menuContent': {
-        templateUrl: 'templates/io-help.html'
+        templateUrl: 'templates/io-help.html',
+        controller: 'ReplyCtrl'
       }
     }
   })

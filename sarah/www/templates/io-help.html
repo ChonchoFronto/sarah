@@ -1,64 +1,45 @@
 <ion-view view-title="Reply Manager">
   <ion-content>
     <div class="card">
-    <div class="item item-text-wrap" id="reply-manager">
-      <h1>Reply Manager</h1>
+  <div class="item item-text-wrap" id="reply-manager">
+    <h1>Reply Manager</h1>
+  </div>
+</div>
+<div class="row responsive-sm" id="row1-wrap">
+  <div class="col" id="commands">
+    <ion-list can-swipe="false">
+      <!-- href="#/app/playlists/{{playlist.id}}" -->
+      <ion-item class="item cmd-item" ng-repeat="command in commands">
+        <button class="button-info button-icon ion-edit"  ng-click="edit(command)">
+          <strong>{{command.title}}</strong>
+        </button>
+          <ion-option-button class="button-info button-icon ion-edit"  ng-click="edit(command)">
+          </ion-option-button>
+    </ion-list>
+  </div>
+
+    <div class="card" id="command-desc">
+      <span class="desc"><p><strong>{{selectedCommand.title}}</strong></p></span>
+      <p>{{selectedCommand.description}}</p>
+    <div id="btn-container">
+      <button class="button button-small" id="edit-btn">
+        Edit
+      </button>
+    </div>
+
     </div>
   </div>
-  <div class="row responsive-sm" id="row1-wrap">
-    <div class="col" id="commands">
-      <ul class="list">
-        <li class="item selected cmd-item">
-          <p><strong>Command 1</strong></p>
-        </li>
-        <li class="item cmd-item">
-          <p><strong>Command 2</strong></p>
-        </li>
-        <li class="item cmd-item">
-          <p><strong>Command 3</strong></p>
-        </li>
-        <li class="item cmd-item">
-          <p><strong>Command 4</strong></p>
-        </li>
-        <li class="item cmd-item">
-          <p><strong>Command 5</strong></p>
-        </li>
-        <li class="item cmd-item">
-          <p><strong>Command 6</strong></p>
-        </li>
-        <li class="item cmd-item">
-          <p><strong>Command 7</strong></p>
-        </li>
-        <li class="item cmd-item">
-          <p><strong>Command 8</strong></p>
-        </li>
-      </ul>
-    </div>
-      <div class="card" id="command-desc">
-        <span class="desc"><p><strong>Command 1 Description</strong></p></span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div id="btn-container">
-        <button class="button button-small" id="edit-btn">
-          Edit
-        </button>
+  <div class="row responsive-sm" id="row2-wrap">
+    <div class="list card" id="internal-notes">
+      <div class="item notes">
+        <p><strong>Internal Notes</strong>
+          <br />{{selectedCommand.notes}}</p>
       </div>
-
+      <div class="item last-edited">
+        <p><strong>Last Edited</strong>
+          <br />March 24, 2016</p>
       </div>
     </div>
-    <div class="row responsive-sm" id="row2-wrap">
-      <div class="list card" id="internal-notes">
-        <div class="item notes">
-          <p><strong>Internal Notes</strong>
-            <br />Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-        </div>
-        <div class="item last-edited">
-          <p><strong>Last Edited</strong>
-            <br />March 24, 2016</p>
-        </div>
-      </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-  </ion-content>
+  </div>
+</ion-content>
 </ion-view>
