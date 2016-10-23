@@ -13,6 +13,11 @@
   color: #000;
 }
 
+.my-menu .item-divider{
+  background-color: #444444;
+  color: white;
+}
+
 .login-card {
   margin-left:25%;
   margin-right:25%;
