@@ -52,9 +52,8 @@ li {
   list-style: none;
   padding: 0.5em 0;
 }
-
-#sarah-img {
-  background: url('../imgs/logo/woman_generic.png');
+#sarah {
+  margin: auto;;
 }
 
 #btn-container {
@@ -179,14 +178,17 @@ li {
     max-width: 80%;
   }
   #searchbar,
-  #dash-total,
-  #avatar-card {
+  #dash-total, {
     margin: 0 auto;
     width: 90%;
   }
+  #avatar-card {
+    margin: 0 auto;
+    width: 95%;
+  }
   #avatar {
     margin: auto;
-    width: 80%;
+    width: 90%;
     text-align: center;
   }
   #db-btn {
@@ -252,13 +254,13 @@ li {
     margin: auto;
   }
   #searchbar
-  #dash-total {
+  #dash-total,
+  #avatar-card {
     width: 75%;
   }
   #db-btn {
     width: 250px;
   }
-
   #new-descrip p {
     max-width: 60%;
     margin: auto;
