@@ -38,7 +38,10 @@ SARAH’s phone number is also a mobile donation receiver and solicitor. This nu
 
 
 ### OUTREACH (Inside services marketing):
-The SARAH Sudo business card:
+##### The SARAH Sudo business card:
+
+![alt text](
+https://s3.amazonaws.com/sarah--gift-the-codeimages/business-card.jpg  "SARAH Business Card")
 
 These business cards will be accessible to secret shelters for those who are currently staying or leaving the facilities. The card is given discreetly by counselors/staff.
 
@@ -62,7 +65,7 @@ which is International Day for the Elimination of Violence Against Women.
 ### Campaign outcomes:
 + Increase monthly donors
 
-FACEBOOK example:
+#### FACEBOOK example:
 ![alt text](
 https://s3.amazonaws.com/sarah--gift-the-codeimages/AdParlor_Website+Clicks_Newsfeed_Preview+(1).png "#25days4Her Campaign Facebook example")
 
