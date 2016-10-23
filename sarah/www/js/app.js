@@ -52,71 +52,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.analytics', {
-    url: '/analytics',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/analytics.html'
-      }
-    }
-  })
-
-  .state('app.io', {
-    url: '/io',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/io.html'
-      }
-    }
-  })
-
-  .state('app.io-help', {
-    url: '/io/help',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/io-help.html',
-        controller: 'ReplyCtrl'
-      }
-    }
-  })
-
-  .state('app.io-donations', {
-    url: '/io/donations',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/io-donations.html',
-        controller: 'DonationsCtrl'
-      }
-    }
-  })
-
-  .state('app.io-recurring', {
-    url: '/io/recurring',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/io-recurring.html'
-      }
-    }
-  })
-
-  .state('app.io-events', {
-    url: '/io/events',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/io-events.html'
-      }
-    }
-  })
-
-  .state('app.io-languages', {
-    url: '/io/languages',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/io-languages.html'
-      }
-    }
-  })
-
   .state('app.profile', {
     url: '/profile',
     views: {
@@ -126,12 +61,50 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.history', {
-    url: '/history',
+  .state('app.reply-manager', {
+    url: '/reply/manager',
     views: {
       'menuContent': {
-        templateUrl: 'templates/history.html',
-        controller: 'HistoryCtrl'
+        templateUrl: 'templates/reply-manager.html',
+        controller: 'ReplyManagerCtrl'
+      }
+    }
+  })
+
+  .state('app.reply-summary', {
+    url: '/reply/summary',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/reply-summary.html'
+      }
+    }
+  })
+
+  .state('app.history', {
+    url: '/reply/history',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/reply-history.html',
+        controller: 'ReplyHistoryCtrl'
+      }
+    }
+  })
+
+  .state('app.donation-manager', {
+    url: '/donation/manager',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/donation-manager.html',
+        controller: 'DonationManagerCtrl'
+      }
+    }
+  })
+
+  .state('app.donation-summary', {
+    url: '/donation/summary',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/donation-summary.html',
       }
     }
   })

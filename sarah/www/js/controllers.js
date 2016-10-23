@@ -85,7 +85,7 @@ angular.module('starter.controllers', [])
     ]
 })
 
-.controller('ReplyCtrl', function($scope) {
+.controller('ReplyManagerCtrl', function($scope) {
   $scope.commands = [
     {title: 'Employment', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'},
     {title: 'Foodbank', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 25, 2016'},
@@ -108,7 +108,7 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('DonationsCtrl', function($scope) {
+.controller('DonationManagerCtrl', function($scope) {
   $scope.commands = [
     {title: 'General', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'},
 
@@ -136,7 +136,7 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('HistoryCtrl', function($scope) {
+.controller('ReplyHistoryCtrl', function($scope) {
   $scope.records = [
     {
       phoneNumber: '613-267-3704',

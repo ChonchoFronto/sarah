@@ -27,38 +27,32 @@
   </ion-header-bar>
   <ion-content class="my-menu">
     <ion-list class="list">
-      <!--<ion-item menu-close ng-click="login()">
-      Login
-    </ion-item> -->
     <ion-item menu-close href="#/app/dashboard">
       Dashboard
     </ion-item>
-    <ion-item menu-close href="#/app/io">
-      Reply Manager
-    </ion-item>
-    <ion-item nav-clear menu-close class="submenu" href="#/app/io/help">
-      <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Help Responses
-    </ion-item>
-    <ion-item nav-clear menu-close href="#/app/io/donations">
-      <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Donation Responses
-    </ion-item>
-    <ion-item  nav-clear menu-close href="#/app/io/recurring">
-      <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Recurring
-    </ion-item>
-    <ion-item  nav-clear menu-close href="#/app/io/events">
-      <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Events
-    </ion-item>
-    <ion-item  nav-clear menu-close href="#/app/io/languages">
-      <i class="icon ion-chevron-right icon-accessory"></i>&nbsp;Languages
-    </ion-item>
-    <ion-item nav-clear menu-close href="#/app/analytics">
-      Analytics
-    </ion-item>
-    <ion-item nav-clear menu-close href="#/app/history">
-      History
-    </ion-item>
     <ion-item nav-clear menu-close href="#/app/profile">
       Sarah's Profile
+    </ion-item>
+    <ion-item class="item item-divider">
+      Replies
+    </ion-item>
+    <ion-item nav-clear menu-close href="#/app/reply/manager">
+      Reply Manager
+    </ion-item>
+    <ion-item nav-clear menu-close href="#/app/reply/summary">
+      Reply Summary
+    </ion-item>
+    <ion-item nav-clear menu-close href="#/app/reply/history">
+      Reply History
+    </ion-item>
+    <ion-item class="item item-divider">
+      Donations
+    </ion-item>
+    <ion-item nav-clear menu-close href="#/app/donation/manager">
+      Donation Manager
+    </ion-item>
+    <ion-item nav-clear menu-close href="#/app/donation/summary">
+      Donation Summary
     </ion-item>
   </ion-list>
 </ion-content>
