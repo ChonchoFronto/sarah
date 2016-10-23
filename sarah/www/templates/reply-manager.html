@@ -1,38 +1,37 @@
 <ion-view view-title="Reply Manager">
   <ion-content>
     <div class="card">
-  <div class="item item-text-wrap" id="reply-manager">
-    <h1>Reply Manager</h1>
-  </div>
-</div>
-<div class="row responsive-sm" id="row1-wrap">
-  <div class="col" id="commands">
-    <ion-list>
-      <ion-item class="item cmd-item" ng-class="{'selected': command.title == selectedCommand.title}" ng-repeat="command in commands" ng-click="edit(command)">
-        <strong>{{command.title}}</strong>
-    </ion-list>
-  </div>
+      <div class="item item-text-wrap" id="reply-manager">
+        <h1>Reply Manager</h1>
+      </div>
+    </div>
+    <div class="row responsive-sm" id="row1-wrap">
+      <div class="col" id="commands">
+        <ion-list>
+          <ion-item class="item cmd-item" ng-class="{'selected': action.Action == selectedCommand.Action}" ng-repeat="action in actions" ng-click="edit(action)">
+            <strong>{{action.Action}}</strong>
+        </ion-list>
+      </div>
 
     <div class="card" id="command-desc">
-      <span class="desc"><p><strong>{{selectedCommand.title}}</strong></p></span>
-      <p>{{selectedCommand.description}}</p>
-    <div id="btn-container" ng-if="selectedCommand.visible">
-      <button class="button button-small" id="edit-btn">
-        Edit
-      </button>
-    </div>
-
+      <span class="desc"><p><strong>{{selectedCommand.Action}}</strong></p></span>
+      <p>{{selectedCommand.Response}}</p>
+      <div id="btn-container" ng-if="selectedCommand.visible">
+        <button class="button button-small" id="edit-btn">
+          Edit
+        </button>
+      </div>
     </div>
   </div>
   <div class="row responsive-sm" id="row2-wrap">
     <div class="list card" id="internal-notes">
       <div class="item notes">
         <p><strong>Internal Notes</strong>
-          <br />{{selectedCommand.notes}}</p>
+          <br />Lorem ipsum dolor</p>
       </div>
       <div class="item last-edited">
         <p><strong>Last Edited</strong>
-          <br />{{selectedCommand.updated}}</p>
+          <br />Time</p>
       </div>
     </div>
   </div>

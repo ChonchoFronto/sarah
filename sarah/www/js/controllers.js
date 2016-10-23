@@ -72,6 +72,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ReplyManagerCtrl', function($scope) {
+  var lambda = new AWS.Lambda();
+
   $scope.commands = [
     {title: 'Employment', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'},
     {title: 'Foodbank', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 25, 2016'},
@@ -81,8 +83,8 @@ angular.module('starter.controllers', [])
     {title: 'Volunteer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'}];
 
   $scope.selectedCommand = {
-    title: '',
-    description: '',
+    Action: '',
+    Response: '',
     notes: '',
     updated: '',
     visible: false
@@ -92,6 +94,27 @@ angular.module('starter.controllers', [])
     $scope.selectedCommand = command;
     $scope.selectedCommand.visible = true;
   }
+
+  $scope.getActions = function() {
+    var params = {
+      FunctionName: "getActions"
+    };
+
+    lambda.invoke(params, function(err, data) {
+      if (err) console.log(err);
+      else {
+        data = JSON.parse(data.Payload);
+
+        $scope.$apply(function() {
+          $scope.actions = data.Actions;
+        });
+      };
+    });
+  };
+
+  $scope.$on("$ionicView.beforeEnter", function(event, data){
+    $scope.getActions();
+  });
 })
 
 .controller('DonationManagerCtrl', function($scope) {
