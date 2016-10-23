@@ -137,6 +137,7 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 + Increase following, donations, awareness,
 + Promoting services
 + Campaign easily implemented
+
 ##### Positive:
 + Donor retention
 + Long term: Forecasting stats - Donation summary
@@ -150,7 +151,7 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 + The application is implemented on the client and server side with real calls to the serverless backend hosted on AWS. The chat aspect of the application via api.ai makes it a very simple way for women to interact with Women's Habitat without compromising their safety. The admin client app shows relevant analytics in a simple way that permits Women's Habitat employees to make better decisions based on user interaction with SARAH.
 
 ##### Pitch Perfect: The pitch of the solution conveyed the problem, solution and feasibility.
-+ Problem: They were not getting enough donations, and wanted to expand into the younger demographics. We identified the key opportunity is to also capture reoccuring donations from the same donor. [Insert stat]
++ Problem: They were not getting enough donations, and wanted to expand into the younger demographics. We identified the key opportunity is to also capture reccuring donations from the same donor; because reccuring donors donate 42% more annually than a one-time donor.
 + Solution: We identified key behaviours and trends among the young demographics ie. millennials. Millenials are mobile-oriented and therefore, we utilized SMS messaging along with Facebook messaging to provide value upon donation.
 + Story: #25days4Her, create empathy, short story chapters, raise awareness and educate others, and subscription to further chapters and potential monthly donations
 + Mobile payments: Text or Facebook messenger to create a seamless payment method.
