@@ -204,7 +204,7 @@ angular.module('starter.controllers', [])
   $scope.commands = [
     {title: 'General', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: '23 Oct 2016'},
 
-    {title: '#25Days4Her', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: '25 March 2016'},
+    {title: '#25Days4Her', description: 'This campaign starts on November 1st, leading up to November 25th which is International Day for the Elimination of Violence Against Women. 25 chapters of a story, telling the real life struggles of a survivor This can be set-up to post using Hootsuite. Campaign marketed on all social media (Facebook, Twitter). Can sign up for this campaign – 25 days of mobile texts = checks their phones often and easy to interact with charity. Sign up knowing that they will receive 25 texts that follow the journey of a survivor: The Subscription process: TEXT or sign up via FACEBOOK/TWITTER. appeals to all friends, wives, girlfriends, women, mothers, daughters, if you know someone who survived', notes: 'Campaign outcomes: Increase monthly donors', updated: '25 March 2016'},
 
     {title: 'Tea for Teens', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: '14 Feb 2016'},
 
