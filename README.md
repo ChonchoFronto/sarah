@@ -158,6 +158,7 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 
 ##### Design: The design of the solution was well thought out.
 + The website is built used by mobile-first approach, kept the layout in the interface simple; keeping the user experience in mind. It handles the organization and coordination of replies to donors and survivors. Therefore there is a clear separation between the handling of information between the different parties. The administration will effectively allocate time to other priority tasks.
+
 ##### Innovation: The team has identified a unique way to solve the problem.
 + Promoting Women’s Habitat services and providing companionship via S.A.R.A.H. to break the return cycle back to the shelter.
 + It’s innovative because it is easily accessible and private
