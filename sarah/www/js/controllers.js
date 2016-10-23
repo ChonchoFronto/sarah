@@ -24,11 +24,77 @@ angular.module('starter.controllers', [])
 
 
 .controller('DashboardCrtl', function($scope) {
-    $scope.settings = [
-        { icon: 'ion-ios-search', title: "Search"},
-        { icon: 'ion-gear-b', title: "Settings"},
-        { icon: 'ion-power', title: "Log Out"}
+    $scope.totalDonations = "$28, 3473";
+    $scope.totalWomenServed = "687";
+
+    $scope.actions = [
+      {
+        action: 'Housing',
+        invocationCount: 10
+      },
+      {
+        action: 'Shelter',
+        invocationCount: 9
+      },
+      {
+        action: 'Employment',
+        invocationCount: 8
+      },
+      {
+        action: 'Counselling',
+        invocationCount: 9
+      },
+      {
+        action: 'Women\'s Health',
+        invocationCount: 8
+      }
+    ];
+
+    $scope.keywords = ['Alcohol', 'Domestic Violence', 'Divorce Law',
+    'Hospital', 'Stress'];
+
+    $scope.items = [
+      { title: 'Job',
+        description: 'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.'},
+      { title: 'Safe Houses',
+        description: 'Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.'},
+      { title: 'Legal',
+        description: 'Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.'}
     ]
+
+    $scope.getUserInfo = function() {
+    // Build Params
+    var params = {
+      FunctionName: "getSarahAnalytics"
+    };
+
+    console.log(params);
+
+    // Call to lambda
+    lambda.invoke(params, function(err, data) {
+      if (err) {
+        console.log(err);
+      }
+      else {
+        data = JSON.parse(data.Payload);
+
+        // Apply it to our model
+
+        /*$scope.$apply(function() {
+          $scope.buttonId = data.ButtonId;
+          $scope.totalQuickSaved = data.TotalQuickSaved;
+          $scope.checkingFunds = data.CheckingFunds;
+          $scope.savingsFunds = data.SavingsFunds;
+          $scope.monthlyGoal = data.MonthlyGoal;
+          $scope.singleClickAmount = data.SingleClickAmount;
+          $scope.doubleClickAmount = data.DoubleClickAmount;
+
+          $scope.percentOfMonthlyGoal =  Math.round(($scope.totalQuickSaved/$scope.monthlyGoal) * 100);
+          $scope.setGoalMessage($scope.percentOfMonthlyGoal);
+        });*/
+      }
+    });
+  };
 })
 
 .controller('ReplyManagerCtrl', function($scope) {
@@ -109,37 +175,37 @@ angular.module('starter.controllers', [])
   $scope.totalAmount = '14,664';
 
   $scope.campaigns = [
-    {
-      title: 'General',
-      number: '2344',
-      description: 'desk'
-    },
-    {
-      title: '#25Days4Her',
-      number: '5455',
-      description: 'table'
-    },
-    {
-      title: 'Tea for Teens',
-      number: '101',
-      description: 'chair'
-    },
-    {
-      title: 'Capital Campaign Gala',
-      number: '5433',
-      description: 'sofa'
-    },
-    {
-      title: 'Shoppers Drug Mart',
-      number: '101000',
-      description: 'couch'
-    },
-    {
-      title: 'GiftTheCode',
-      number: '5433',
-      description: 'banana'
-    }
-  ];
+  {
+    title: "General",
+    number: "$9,453.41",
+    description: "Lorem consequat fugiat quis qui mollit pariatur ea ullamco exercitation ullamco consequat id laborum quis adipisicing tempor elit do velit ad commodo anim elit reprehenderit sunt quis exercitation do Lorem ipsum in sunt consequat eu dolore tempor eiusmod voluptate ex sint ea anim dolore aliquip"
+  },
+  {
+    title: "#25Days4Her",
+    number: "$12,251.55",
+    description: "commodo qui eu veniam nulla ullamco pariatur pariatur excepteur eiusmod duis reprehenderit ipsum mollit fugiat officia voluptate in ut consequat aute velit minim cupidatat est in reprehenderit ut sunt sunt commodo culpa tempor sit eiusmod occaecat ex magna non id velit laborum veniam occaecat nulla"
+  },
+  {
+    title: "Tea for Teens",
+    number: "$9,118.59",
+    description: "et deserunt anim exercitation cillum ut aute esse labore consequat deserunt laboris mollit reprehenderit anim labore exercitation exercitation dolore ullamco ex officia amet dolor eu commodo officia officia commodo minim enim amet consectetur nisi esse dolor occaecat reprehenderit consequat irure dolor minim elit eu consectetur"
+  },
+  {
+    title: "Capital Campaign Gala",
+    number: "$9,807.75",
+    description: "quis tempor do mollit culpa proident ex cillum culpa ad id exercitation ex Lorem laborum aute laboris in eu aliquip cillum exercitation proident labore occaecat laborum eu ea deserunt deserunt velit ex non non amet laboris consectetur deserunt nulla excepteur ut sunt cupidatat laborum nostrud"
+  },
+  {
+    title: "Shoppers Drug Mart",
+    number: "$12,156.42",
+    description: "veniam id cupidatat irure sit anim est nostrud sunt nisi ipsum proident laborum magna culpa officia in et qui aute veniam sint eiusmod velit nisi cupidatat deserunt adipisicing qui et eu qui consectetur adipisicing sint ullamco velit duis in laboris cupidatat minim et labore ut"
+  },
+  {
+    title: "#GiftTheCode",
+    number: "$12,935.67",
+    description: "est elit pariatur dolor est dolor aliqua exercitation deserunt ad velit ad tempor ex incididunt sunt mollit id duis laboris irure proident ullamco cillum eiusmod veniam occaecat reprehenderit excepteur velit do dolore eiusmod exercitation eiusmod laboris laborum quis labore id ex ipsum exercitation incididunt voluptate"
+  }
+];
 
   $scope.selectedCampaign = {
     title: '',
@@ -154,19 +220,22 @@ angular.module('starter.controllers', [])
   };
 
   $scope.donations = [
-    {
-      date: 'March 20 2016',
-      amount: 50
-    },
-    {
-      date: 'March 17 2016',
-      amount: 40
-    },
-    {
-      date: 'March 16 2016',
-      amount: 70
-    }
-  ]
+  { date: "2015-05-26", amount: "$68.90" },
+  { date: "2014-10-04", amount: "$82.98" },
+  { date: "2015-01-28", amount: "$65.34" },
+  { date: "2015-09-28", amount: "$51.98" },
+  { date: "2014-12-28", amount: "$64.85" },
+  { date: "2015-10-07", amount: "$73.01" },
+  { date: "2015-12-25", amount: "$44.02" },
+  { date: "2014-11-13", amount: "$71.15" },
+  { date: "2014-08-01", amount: "$45.46" },
+  { date: "2016-09-14", amount: "$71.69" },
+  { date: "2016-04-15", amount: "$43.60" },
+  { date: "2014-12-11", amount: "$69.08" },
+  { date: "2014-12-27", amount: "$52.66" },
+  { date: "2014-07-16", amount: "$64.02" },
+  { date: "2015-09-16", amount: "$37.77" },
+]
 })
 
 .controller('ReplyHistoryCtrl', function($scope) {
