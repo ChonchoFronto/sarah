@@ -1,93 +1,71 @@
 <ion-view view-title="SARAH">
   <ion-content>
-  <div class="card">
-  <div class="item item-text-wrap" id="total-header">
-    <h1>Dashboard</h1>
-  </div>
-  </div>
-  <div class="row responsive-sm" id="search-div">
-    <div class="list" id="searchbar">
-      <div class="item item-input-inset">
-        <label class="item-input-wrapper">
-          <input type="text" placeholder="">
-        </label>
-        <button class="button button-small">
-          Search
-        </button>
+    <div class="card">
+    <div class="item item-text-wrap" id="total-header">
+      <h1>Dashboard</h1>
+    </div>
+    </div>
+    <div class="row responsive-sm" id="search-div">
+      <div class="list" id="searchbar">
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper">
+            <input type="text" placeholder="">
+          </label>
+          <button class="button button-small">
+            Search
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row responsive-sm" id="dash-row1">
-    <div class="card" id="top-searches">
-      <div class="item item-text-wrap">
-        <h2 style="text-align: center"><strong>Top Searches</strong></h2>
-        <ul class="list">
-          <li class="item">
-            1. Housing
-          </li>
-          <li class="item">
-            2. Shelter
-          </li>
-          <li class="item">
-            3. Employment
-          </li>
-          <li class="item">
-            4. Counselling
-          </li>
-          <li class="item">
-            5. Women's health
-          </li>
-        </ul>
+    <div class="row responsive-sm" id="summary">
+      <div class="card" id="dash-total">
+        <div class="item item-text-wrap">
+          <div class="row">
+            <div class="col col-50">Total Donations Received: <strong>{{totalDonations}}</strong></div>
+            <div class="col col-50">Number of Women Served Last Year: <strong>{{totalWomenServed}}</strong></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card" id="new-keywords">
-      <div class="item item-text-wrap">
-        <h2 style="text-align: center"><strong>New Keywords</strong></h2>
-        <ul class="list">
-          <li class="item icon ion-ios-plus-outline">
-            Alcohol
-          </li>
-          <li class="item icon ion-ios-plus-outline">
-            Domestic Violence
-          </li>
-          <li class="item icon ion-ios-plus-outline">
-            Divorce Law
-          </li>
-          <li class="item icon ion-ios-plus-outline">
-            Hospital
-          </li>
-          <li class="item icon ion-ios-plus-outline">
-            Stress
-          </li>
-        </ul>
+    <div class="row responsive-sm" id="dash-row1">
+      <div class="card" id="top-searches">
+        <div class="item item-text-wrap">
+          <h2 style="text-align: center"><strong>Top Searches</strong></h2>
+          <ion-list>
+            <ion-item ng-repeat="action in actions">
+              {{$index + 1}}. {{action.action}}
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+      <div class="card" id="new-keywords">
+        <div class="item item-text-wrap">
+          <h2 style="text-align: center"><strong>New Keywords</strong></h2>
+          <ion-list>
+            <ion-item ng-repeat="keyword in keywords">
+              <i class="icon ion-ios-plus-outline"></i>&nbsp;{{keyword}}
+            </ion-item>
+          </ion-list>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row responsive-sm" id="db-btn-div">
-    <button class="button button-positive" id="db-btn">
-      View Database
-    </button>
-  </div>
-  <div class="row responsive-sm" id="dash-row2">
-    <div class="card" id="new-descrip">
-      <div class="item item-text-wrap">
-        <h2 style="text-align: center"><strong>Recently Added Descriptions</strong></h2>
-        <ul class="list">
-          <li class="item">
-            <div class="item item-divider"><strong>Job</strong><br  /></div>
-            <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
-          </li>
-          <li class="item">
-            <div class="item item-divider"><strong>Safe house</strong><br  /></div>
-            <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-          </li>
-          <li class="item">
-            <div class="item item-divider"><strong>Legal</strong><br  /></div>
-            <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-          </li>
-        </ul>
+    <div class="row responsive-sm" id="db-btn-div">
+      <button class="button button-positive" id="db-btn">
+        View Database
+      </button>
+    </div>
+    <div class="row responsive-sm" id="dash-row2">
+      <div class="card" id="new-descrip">
+        <div class="item item-text-wrap">
+          <h2 style="text-align: center"><strong>Recently Added Descriptions</strong></h2>
+          <ion-list>
+            <ion-item ng-repeat="item in items">
+              <div class="item item-divider"><strong>{{item.title}}</strong></div>
+              <p>{{item.description}}</p>
+            </ion-item>
+          </ion-list>
+        </div>
       </div>
     </div>
-  </div>
   </ion-content>
 </ion-view>
