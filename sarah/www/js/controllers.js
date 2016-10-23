@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
           var actionCounts = []
           var labelNames = []
           console.log(data.Actions);
-          
+
           for (var i=0; i < data.Actions.length; i++) {
             actionCounts.push(data.Actions[i].InvocationCount);
             labelNames.push(data.Actions[i].Action);
@@ -106,7 +106,7 @@ angular.module('starter.controllers', [])
         };
       });
     };
-  
+
   $scope.$on("$ionicView.beforeEnter", function(event, data){
     $scope.getAnalytics();
   });
@@ -199,7 +199,7 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('DonationManagerCtrl', function($scope) {
+.controller('DonationManagerCtrl', function($scope, $ionicModal) {
   $scope.commands = [
     {title: 'General', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'},
 
@@ -217,7 +217,32 @@ angular.module('starter.controllers', [])
 
   $scope.edit = function(command) {
     $scope.selectedCommand = command;
-  }
+  };
+
+  $ionicModal.fromTemplateUrl('templates/new-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+  // Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+  // Execute action on hide modal
+  $scope.$on('modal.hidden', function() {
+    // Execute action
+  });
+  // Execute action on remove modal
+  $scope.$on('modal.removed', function() {
+    // Execute action
+  });
 })
 
 .controller('DonationSummaryCtrl', function($scope) {
@@ -263,20 +288,15 @@ angular.module('starter.controllers', [])
   };
 
   $scope.donations = [
-  { date: "2015-05-26", amount: "$68.90" },
-  { date: "2014-10-04", amount: "$82.98" },
-  { date: "2015-01-28", amount: "$65.34" },
-  { date: "2015-09-28", amount: "$51.98" },
-  { date: "2014-12-28", amount: "$64.85" },
-  { date: "2015-10-07", amount: "$73.01" },
-  { date: "2015-12-25", amount: "$44.02" },
-  { date: "2014-11-13", amount: "$71.15" },
-  { date: "2014-08-01", amount: "$45.46" },
-  { date: "2016-09-14", amount: "$71.69" },
-  { date: "2016-04-15", amount: "$43.60" },
-  { date: "2014-12-11", amount: "$69.08" },
-  { date: "2014-12-27", amount: "$52.66" },
-  { date: "2014-07-16", amount: "$64.02" },
-  { date: "2015-09-16", amount: "$37.77" },
+  { date: "23 Oct 2016", amount: "$68.90" },
+  { date: "23 Oct 2016", amount: "$82.98" },
+  { date: "23 Oct 2016", amount: "$65.34" },
+  { date: "23 Oct 2016", amount: "$51.98" },
+  { date: "22 Oct 2016", amount: "$64.85" },
+  { date: "22 Oct 2016", amount: "$73.01" },
+  { date: "21 Oct 2016", amount: "$44.02" },
+  { date: "21 Oct 2016", amount: "$71.15" },
+  { date: "21 Oct 2016", amount: "$45.46" },
+  { date: "18 Oct 2016", amount: "$69.08" }
 ]
 });
