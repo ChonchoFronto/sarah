@@ -58,8 +58,9 @@ which is International Day for the Elimination of Violence Against Women.
 +  Sign up knowing that they will receive 25 texts that follow the journey of a survivor:
 + The Subscription process: TEXT or sign up via FACEBOOK/TWITTER
 + Appeals to all friends, wives, girlfriends, women, mothers, daughters, if you know someone who survived
+
 #### November 25th
-+ Thank you message: With your support over these 25 days – you’ve helped hundreds of women…etc.[insert milestone]. Thank you for being us on this journey with us.
++ Thank you message: With your support over these 25 days – you’ve helped hundreds of women were able to find help. Thank you for being us on this journey with us.
 + Prompt text: To take her to the next milestone, your continued support of $5 is appreciated. To stop monthly donations, text STOP.
 
 ### Campaign outcomes:
@@ -117,7 +118,8 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 #### Judges - each judge focused on a specific criteria:
 
 #### Problem Solver: Effectively addresses one of the challenges of the assigned charity.
-+ We have created SARAH to directly address two main issues/challenges.
+ We have created SARAH to directly address two main issues/challenges.
+
 1. With SARAH, the younger donor demographic can donate via this mobile giving platform. SMS text, Facebook messenger, whichever medium the user feels comfortable.
 + (Demonstration): DONATE function via text.
 + Marketing campaign: STORY function and show social example promotion posts, explain the chapter a day.
