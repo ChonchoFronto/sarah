@@ -5,8 +5,13 @@ from sarah_survivors import Survivor
 
 def get_message_log(event, context):
     msg_service = MessageService()
-    response = msg_service.get_message_log()
-    return response
+    response = msg_service.get_message_log(limit=25)
+
+    return_item = {
+        'Messages': response
+    }
+    return return_item
+
 
 def get_analytics(event, context):
     cmd_service = CommandService()
@@ -23,6 +28,16 @@ def get_analytics(event, context):
         'TotalMessages': total_messages_received
     }
 
+    return return_item
+
+
+def get_actions(event, context):
+    cmd_service = CommandService()
+    actions = cmd_service.get_actions_by_invocation_count()
+
+    return_item ={
+        "Actions": actions
+    }
     return return_item
 
 
