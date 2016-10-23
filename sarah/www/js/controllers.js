@@ -24,77 +24,97 @@ angular.module('starter.controllers', [])
 
 
 .controller('DashboardCrtl', function($scope) {
-    $scope.totalDonations = "$28, 3473";
-    $scope.totalWomenServed = "687";
+    var ctx = document.getElementById("myChart");
+    var lambda = new AWS.Lambda();
 
-    $scope.actions = [
-      {
-        action: 'Housing',
-        invocationCount: 10
-      },
-      {
-        action: 'Shelter',
-        invocationCount: 9
-      },
-      {
-        action: 'Employment',
-        invocationCount: 8
-      },
-      {
-        action: 'Counselling',
-        invocationCount: 9
-      },
-      {
-        action: 'Women\'s Health',
-        invocationCount: 8
-      }
-    ];
+    $scope.totalMessagesReceived = 321
 
-    $scope.keywords = ['Alcohol', 'Domestic Violence', 'Divorce Law',
-    'Hospital', 'Stress'];
+    $scope.getAnalytics = function() {
+      var params = {
+        FunctionName: "getActions"
+      };
 
-    $scope.items = [
-      { title: 'Job',
-        description: 'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.'},
-      { title: 'Safe Houses',
-        description: 'Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.'},
-      { title: 'Legal',
-        description: 'Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.'}
-    ]
+      lambda.invoke(params, function(err, data) {
+        if (err) console.log(err);
+        else {
+          var data = JSON.parse(data.Payload);
+          var actionCounts = []
+          var labelNames = []
+          console.log(data.Actions);
+          
+          for (var i=0; i < data.Actions.length; i++) {
+            actionCounts.push(data.Actions[i].InvocationCount);
+            labelNames.push(data.Actions[i].Action);
+          };
 
-    $scope.getUserInfo = function() {
-    // Build Params
-    var params = {
-      FunctionName: "getSarahAnalytics"
+          $scope.$apply(function() {
+            var data = {
+              labels: labelNames,
+              datasets: [
+                  {
+                      data: actionCounts,
+                      backgroundColor: [
+                          "#FF6384",
+                          "#36A2EB",
+                          "#FFCE56",
+                          "#7e4fbc ",
+                          "#1a20dd ",
+                          "#f118df ",
+                          "#286550 ",
+                          "#ab86aa ",
+                          "#3ecce3 ",
+                          "#e1223f ",
+                          "#3ea423 "
+                      ],
+                      hoverBackgroundColor: [
+                          "#FF6384",
+                          "#36A2EB",
+                          "#FFCE56",
+                          "#7e4fbc ",
+                          "#1a20dd ",
+                          "#f118df ",
+                          "#286550 ",
+                          "#ab86aa ",
+                          "#3ecce3 ",
+                          "#e1223f ",
+                          "#3ea423 "
+                      ]
+                }]
+            };
+
+            var myPieChart = new Chart(ctx,{
+                type: 'pie',
+                data: data
+            });
+          });
+        }
+      });
+
+      var params2 = {
+        FunctionName: "getSarahAnalytics"
+      };
+
+      lambda.invoke(params2, function(err, data) {
+        if (err) console.log(err);
+        else {
+          var data = JSON.parse(data.Payload);
+
+          $scope.$apply(function() {
+            $scope.survivors = data.MostActiveSurvivors;
+            $scope.totalMessagesReceived = data.TotalMessages
+          });
+        };
+      });
     };
+  
+  $scope.$on("$ionicView.beforeEnter", function(event, data){
+    $scope.getAnalytics();
+  });
 
-    console.log(params);
-
-    // Call to lambda
-    lambda.invoke(params, function(err, data) {
-      if (err) {
-        console.log(err);
-      }
-      else {
-        data = JSON.parse(data.Payload);
-
-        // Apply it to our model
-
-        /*$scope.$apply(function() {
-          $scope.buttonId = data.ButtonId;
-          $scope.totalQuickSaved = data.TotalQuickSaved;
-          $scope.checkingFunds = data.CheckingFunds;
-          $scope.savingsFunds = data.SavingsFunds;
-          $scope.monthlyGoal = data.MonthlyGoal;
-          $scope.singleClickAmount = data.SingleClickAmount;
-          $scope.doubleClickAmount = data.DoubleClickAmount;
-
-          $scope.percentOfMonthlyGoal =  Math.round(($scope.totalQuickSaved/$scope.monthlyGoal) * 100);
-          $scope.setGoalMessage($scope.percentOfMonthlyGoal);
-        });*/
-      }
-    });
-  };
+  $scope.doRefresh = function() {
+    $scope.getAnalytics();
+    $scope.$broadcast('scroll.refreshComplete');
+  }
 })
 
 .controller('ReplyManagerCtrl', function($scope) {
@@ -121,7 +141,7 @@ angular.module('starter.controllers', [])
     lambda.invoke(params, function(err, data) {
       if (err) console.log(err);
       else {
-        data = JSON.parse(data.Payload);
+        var data = JSON.parse(data.Payload);
 
         $scope.$apply(function() {
           $scope.actions = data.Actions;
@@ -141,7 +161,7 @@ angular.module('starter.controllers', [])
 
   var lambda = new AWS.Lambda();
 
-  $scope.getActions = function() {
+  $scope.getMessages = function() {
     var params = {
       FunctionName: "getMessageLog"
     };
@@ -152,14 +172,30 @@ angular.module('starter.controllers', [])
         data = JSON.parse(data.Payload);
 
         $scope.$apply(function() {
+          for (var i=0; i < data.Messages.length; i++) {
+            var d = new Date(-data.Messages[i].Timestamp*1000)
+            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            var year = d.getFullYear();
+            var month = months[d.getMonth()];
+            var date = d.getDate();
+            var hour = d.getHours();
+            var min = d.getMinutes();
+            var sec = d.getSeconds();
+            data.Messages[i].Timestamp = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+          };
           $scope.records = data.Messages;
         });
       };
     });
   };
 
+  $scope.doRefresh = function() {
+    $scope.getMessages();
+    $scope.$broadcast('scroll.refreshComplete');
+  }
+
   $scope.$on("$ionicView.beforeEnter", function(event, data){
-    $scope.getActions();
+    $scope.getMessages();
   });
 })
 

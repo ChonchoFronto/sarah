@@ -1,8 +1,11 @@
 <ion-view view-title="Reply History">
   <ion-content>
 
-    <!-- Table -->
-    <div class="history-content">
+    <ion-refresher pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    
+    <div class="history-content" style="margin: 2% 5%">
       <div class="row history-row">
         <div class="col col-20 history-header">Phone Number</div>
         <div class="col col-20 history-header">Timestamp</div>
@@ -17,7 +20,6 @@
         <div class="col history-body">{{record.MessageSent}}</div>
       </div>
     </div>
-
 
   </ion-content>
 </ion-view>
