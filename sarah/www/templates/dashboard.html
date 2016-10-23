@@ -1,5 +1,47 @@
 <ion-view view-title="Sarah">
+  <ion-nav-title>
+      <img src="img/wh-logox2.png" style="height:40px">
+    </ion-nav-title>
   <ion-content>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <ion-refresher pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <div class="card" style="text-align: center">
+      <h5>Total Messages Received</h5>
+      <h4>{{totalMessagesReceived}}</h4>
+    </div>
+
+    <div class="card" style="text-align:center">
+      <h4>Most Active Users</h4>
+      <div class="list">
+        <div class="item">
+          <div class="row" style="margin: 0px 0px; padding: 0px 0px">
+            <div class="col col-33">
+             <h2>Phone Number</h2>
+            </div>
+            <div class="col col-offset-33 col-33">
+             <h2>Total Messages Sent</h2>
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-repeat="survivor in survivors">
+          <div class="row" style="margin: 0px 0px; padding: 0px 0px">
+            <div class="col col-33">
+             <h3>{{survivor.PhoneNumber}}</h3>
+            </div>
+            <div class="col col-offset-33 col-33">
+             <h3>{{survivor.MessageCount}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+
+    <div class="card" style="height: 50%; text-align: center">
+      <h5 style="padding: 2% 4%">Message Response Distribution</h5>
+      <canvas id="myChart" style="height: 650px; width:650px"></canvas>
+    </div>
   </ion-content>
 </ion-view>
