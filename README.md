@@ -6,7 +6,7 @@
 #### Group # 7 : Lindsay Bangs, Jacob Learned, Karen Nguyen, Jiannine Torres, Marc Witney, Minna Yee
 
 ### WHO IS SARAH?
-SARAH is an automated companion who provides follow up and resource support to current survivors. Her purpose is to decrease the (return rate?) to shelters and continuously providing support.
+SARAH is an automated companion who provides follow up and resource support to current survivors. Her purpose is to decrease the return rate to shelters and continuously providing support.
 
 #### Never alone. 24/7 support. Always there. Leave with a friend.
 
@@ -154,12 +154,10 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 + Solution: We identified key behaviours and trends among the young demographics ie. millennials. Millenials are mobile-oriented and therefore, we utilized SMS messaging along with Facebook messaging to provide value upon donation.
 + Story: #25days4Her, create empathy, short story chapters, raise awareness and educate others, and subscription to further chapters and potential monthly donations
 + Mobile payments: Text or Facebook messenger to create a seamless payment method.
-+ Feasibility: The entire cost of SARAH is $250/year. At a fixed donation of $5 per subscription period, it only requires 50 subscribers to breakeven. Because of the uniqueness, and shareability of the post and content, we see a consistent growth in following among the demographic. [Yr3: 11K]
++ Feasibility: The entire cost of SARAH is $250/year. At a fixed donation of $5 per subscription period, it only requires 50 subscribers to breakeven. Because of the uniqueness, and shareability of the post and content, we see a consistent  and conservative growth of 50% YoY in following among the demographic.
 
 ##### Design: The design of the solution was well thought out.
-+ Developers. Frontline/Backend. S.A.R.A.H.
-+ Someone has to describe: sarah.com (From the admin standpoint, ESPECIALLY MANAGING DONATIONS VIA MOBILE)
-
++ The website is built used by mobile-first approach, kept the layout in the interface simple; keeping the user experience in mind. It handles the organization and coordination of replies to donors and survivors. Therefore there is a clear separation between the handling of information between the different parties. The administration will effectively allocate time to other priority tasks.
 ##### Innovation: The team has identified a unique way to solve the problem.
 + Promoting Women’s Habitat services and providing companionship via S.A.R.A.H. to break the return cycle back to the shelter.
 + It’s innovative because it is easily accessible and private
