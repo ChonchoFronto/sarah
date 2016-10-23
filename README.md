@@ -118,9 +118,8 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 #### Judges - each judge focused on a specific criteria:
 
 #### Problem Solver: Effectively addresses one of the challenges of the assigned charity.
- We have created SARAH to directly address two main issues/challenges.
+ We have created SARAH to directly address two main issues/challenges: 1) With SARAH, the younger donor demographic can donate via this mobile giving platform. SMS text, Facebook messenger, whichever medium the user feels comfortable. 2) Increase current methods for promoting services - on a personal platform, include website, social media and word of mouth.
 
-1. With SARAH, the younger donor demographic can donate via this mobile giving platform. SMS text, Facebook messenger, whichever medium the user feels comfortable.
 + (Demonstration): DONATE function via text.
 + Marketing campaign: STORY function and show social example promotion posts, explain the chapter a day.
 + 25days4her - subscription
@@ -130,8 +129,6 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 + Increase awareness facebook/twitter followers by 5000+
 + Increase donor retention: first time (20%) and repeat donor (50%) retention
 + This campaign is projected to produce an estimated total of $100,000 donations
-
-2. With SARAH, increase current methods for promoting services - on a personal platform, include website, social media and word of mouth.
 
 
 #### Impact: The solution will have an immediate and positive impact on the charity.
