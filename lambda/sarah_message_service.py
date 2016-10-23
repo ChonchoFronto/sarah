@@ -3,6 +3,7 @@ import boto3
 from botocore.exceptions import ClientError
 import calendar
 import time
+from operator import itemgetter
 
 class MessageService:
 
@@ -27,4 +28,5 @@ class MessageService:
     def get_message_log(self, limit):
         response = self.messages_table.scan(Limit=limit)
         messages_list = [] if 'Items' not in response else response['Items']
+        messages_list = sorted(messages_list, key=itemgetter('Timestamp'))
         return messages_list
