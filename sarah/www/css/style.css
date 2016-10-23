@@ -66,6 +66,11 @@ li {
   width: 100px;
 }
 
+.nav-bar-style {
+  background-color: #69b3b7 !important;
+  color: white !important;
+}
+
 #db-btn-div {
   margin: auto;
   width: 90%;
