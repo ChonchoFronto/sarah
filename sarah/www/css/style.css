@@ -22,6 +22,16 @@
   border-color: transparent;
 }
 
+.history-header {
+  font-weight: bold;
+  background-color: #bdc3c7;
+    border: 1px solid #bdc3c7;
+}
+
+.history-body {
+  border: 1px solid #bdc3c7;
+}
+
 
 /* Jiannine CSS */
 .selected {
@@ -52,9 +62,27 @@ li {
   width: 100px;
 }
 
+#db-btn-div {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+
+#db-btn {
+  margin: 0 auto;
+}
+
+#search-div {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+
 #commands {
   /*border: 1px solid black;*/
   text-align: center;
+  padding: 0;
+  margin-right: 0.5em;
 }
 
 #right-contain {
@@ -66,6 +94,7 @@ li {
 
 #command-desc {
   /*border:1px solid blue;*/
+  margin: 0;
 }
 
 #notes {
@@ -102,7 +131,7 @@ li {
   }
   #command-desc {
     float: right;
-    width: 60%;
+    width: 70%;
   }
   #campaign-desc {
     width: 50%;
@@ -111,40 +140,56 @@ li {
   #live-count {
     width: 30%;
     padding: 0.5em;
+    margin-top: 1em;
   }
-  .notes,
+  /*.notes,
   .last-edited {
     clear: both;
-  }
+  }*/
   .totals {
     width: 45%;
     text-align: center;
   }
+  #dash-row1,
   #dash-row2 {
-    max-width: 90%;
+    max-width: 80%;
+    text-align: center;
     margin: 0 auto;
   }
   #top-searches {
-    width: 60%;
+    width: 50%;
     margin: auto;
   }
+  #db-btn-div {
+    max-width: 80%;
+  }
+  #searchbar {
+    margin: 0 auto;
+    width: 90%;
+  }
   #db-btn {
-    margin: 1em auto;
+    margin: auto;
+    width: 150px;
   }
   #new-keywords {
     width: 50%;
     text-align: center;
   }
   #new-descrip {
-    width: 50%;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
+  #dash-row1 {
+    max-width: 75%;
+    text-align: center;
+    margin: auto;
+  }
   #row1-wrap,
   #row2-wrap {
-    max-width: 80%;
-    margin: auto;
+    max-width: 65%;
+    margin: 0 auto;
   }
   #commands {
     float: left;
@@ -162,7 +207,8 @@ li {
   }
   #live-count {
     width: 40%;
-    margin: auto;
+    height: 100%;
+    margin: 1em auto;
   }
   #internal-notes {
     width: 100%;
@@ -181,7 +227,17 @@ li {
     display: inline-block;
   }
   #top-searches {
-    width: 30%;
+    margin: auto;
+  }
+  #searchbar {
+    width: 80%;
+  }
+  #db-btn {
+    width: 250px;
+  }
+
+  #new-descrip p {
+    max-width: 60%;
     margin: auto;
   }
 }

@@ -1,0 +1,28 @@
+<ion-view view-title="History">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap" id="reply-manager">
+        <h1>History</h1>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="history-content">
+      <div class="row history-row">
+        <div class="col col-20 history-header">Phone Number</div>
+        <div class="col col-20 history-header">Timestamp</div>
+        <div class="col history-header">Message Received</div>
+        <div class="col history-header">Message Sent</div>
+      </div>
+
+      <div class="row history-row" ng-repeat="record in records">
+        <div class="col col-20 history-body">{{record.phoneNumber}}</div>
+        <div class="col col-20 history-body">{{record.timestamp}}</div>
+        <div class="col history-body">{{record.received}}</div>
+        <div class="col history-body">{{record.sent}}</div>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

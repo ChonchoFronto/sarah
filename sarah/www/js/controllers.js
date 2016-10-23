@@ -62,41 +62,6 @@ angular.module('starter.controllers', [])
 
 })
 
-/*.controller('MyController', function($scope, $ionicPopover) {
-
-  // .fromTemplate() method
-  var template = '<ion-popover-view><ion-header-bar> <h1 class="title">My Popover Title</h1> </ion-header-bar> <ion-content> Hello! </ion-content></ion-popover-view>';
-
-  $scope.popover = $ionicPopover.fromTemplate(template, {
-    scope: $scope
-  });
-  $ionicPopover.fromTemplateUrl('popover.html', {
-    scope: $scope
-  }).then(function(popover) {
-    $scope.popover = popover;
-  });
-
-
-  $scope.openPopover = function($event) {
-    $scope.popover.show($event);
-  };
-  $scope.closePopover = function() {
-    $scope.popover.hide();
-  };
-  //Cleanup the popover when we're done with it!
-  $scope.$on('$destroy', function() {
-    $scope.popover.remove();
-  });
-  // Execute action on hide popover
-  $scope.$on('popover.hidden', function() {
-    // Execute action
-  });
-  // Execute action on remove popover
-  $scope.$on('popover.removed', function() {
-    // Execute action
-  });
-});
-*/
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
@@ -169,4 +134,20 @@ angular.module('starter.controllers', [])
     $scope.selectedCommand = command;
     $scope.selectedCommand.visible = true;
   }
+})
+
+.controller('HistoryCtrl', function($scope) {
+  $scope.records = [
+    {
+      phoneNumber: '613-267-3704',
+      timestamp: 'October 22 2016',
+      received: 'received message',
+      sent: 'sent message'
+    },{
+      phoneNumber: '613-267-8858',
+      timestamp: 'October 21 2016',
+      received: 'lorem message',
+      sent: 'sent ipsum'
+    }
+  ]
 });
