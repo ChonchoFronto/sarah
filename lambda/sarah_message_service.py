@@ -26,15 +26,5 @@ class MessageService:
     
     def get_message_log(self, limit):
         response = self.messages_table.scan(Limit=limit)
-        
         messages_list = [] if 'Items' not in response else response['Items']
-        messages_list = [{
-                            'PhoneNumber': m["PhoneNumber"],
-                            'Timestamp': time.strftime('%H:%M:%S %Y-%m-%d', time.localtime(-m['Timestamp'])),
-                            'MessageSent': m['MessageSent'],
-                            'MessageReceived': m['MessageReceived']
-                         } 
-                         for m in messages_list]
-        
-        print(messages_list)
         return messages_list
