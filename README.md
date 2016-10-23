@@ -48,16 +48,16 @@ These business cards will be accessible to secret shelters for those who are cur
 This campaign starts on November 1st, leading up to November 25th
 which is International Day for the Elimination of Violence Against Women.
 + 25 chapters of a story, telling the real life struggles of a survivor
-..* This can be set-up to post using Hootsuite
++ This can be set-up to post using Hootsuite
 + Campaign marketed on all social media (Facebook, Twitter) #25days4Her
 + Donations through social media can be implemented by Goodworld.me
 + Can sign up for this campaign – 25 days of mobile texts = checks their phones often and easy to interact with charity
-    ..*  Sign up knowing that they will receive 25 texts that follow the journey of a survivor:
-    ..* The Subscription process: TEXT or sign up via FACEBOOK/TWITTER
++  Sign up knowing that they will receive 25 texts that follow the journey of a survivor:
++ The Subscription process: TEXT or sign up via FACEBOOK/TWITTER
 + Appeals to all friends, wives, girlfriends, women, mothers, daughters, if you know someone who survived
 #### November 25th
 + Thank you message: With your support over these 25 days – you’ve helped hundreds of women…etc.[insert milestone]. Thank you for being us on this journey with us.
-    ..* Prompt text: To take her to the next milestone, your continued support of $5 is appreciated. To stop monthly donations, text STOP.
++ Prompt text: To take her to the next milestone, your continued support of $5 is appreciated. To stop monthly donations, text STOP.
 
 ### Campaign outcomes:
 + Increase monthly donors
@@ -94,10 +94,10 @@ Currently, the Women’s Habitat uses on-line donation via website and general s
 
 #### Two main issues/challenges:
 + Women’s Habitat statistic services:
-   ..* crisis calls (for shelter and other – i.e. counselling, etc.): 1100
++ crisis calls (for shelter and other – i.e. counselling, etc.): 1100
 + Attracting younger donors, implementing mobile donations
-   ..* Millennials donate through their phone
-   ..* Monthly donor / subscription / retention
++ Millennials donate through their phone
++ Monthly donor / subscription / retention
 
 #### Solution: Introducing S.A.R.A.H.
 Survivors Automated Response Alert Hotline
@@ -116,10 +116,10 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 #### Problem Solver: Effectively addresses one of the challenges of the assigned charity.
 + We have created SARAH to directly address two main issues/challenges.
 1. With SARAH, the younger donor demographic can donate via this mobile giving platform. SMS text, Facebook messenger, whichever medium the user feels comfortable.
-    ..* (Demonstration): DONATE function via text.
-    ..* Marketing campaign: STORY function and show social example promotion posts, explain the chapter a day.
-    ..* 25days4her - subscription
-    ..* Why this works: millennials appeal to emotional experiences, quick, very little effort, short read, emotional investment
++ (Demonstration): DONATE function via text.
++ Marketing campaign: STORY function and show social example promotion posts, explain the chapter a day.
++ 25days4her - subscription
++ Why this works: millennials appeal to emotional experiences, quick, very little effort, short read, emotional investment
 + Introduce mobile platform, connecting social media with donating
 + Increase younger donors by 2900+
 + Increase awareness facebook/twitter followers by 5000+
@@ -130,45 +130,45 @@ SARAH is a mobile 24/7 support companion-bot that also solicits donations. She p
 
 
 #### Impact: The solution will have an immediate and positive impact on the charity.
-+ Immediate:
-    ..* Increase following, donations, awareness,
-    ..* Promoting services
-    ..* Campaign easily implemented
-+ Positive:
-    ..* Donor retention
-    ..* Long term: Forecasting stats - Donation summary
-    ..* Immediately opens up to XXXX donors
+##### Immediate:
++ Increase following, donations, awareness,
++ Promoting services
++ Campaign easily implemented
+##### Positive:
++ Donor retention
++ Long term: Forecasting stats - Donation summary
++ Immediately opens up to XXXX donors
 
-#### User-Friendly: The solution can be implemented by the charity with minimal effort.
+##### User-Friendly: The solution can be implemented by the charity with minimal effort.
 + SARAH is user friendly to the client,
 + The charity will have a log-in
 
-#### Performance: the solution works and functions as intended.
-+ Developers explain this
+##### Performance: the solution works and functions as intended.
++ The application is implemented on the client and server side with real calls to the serverless backend hosted on AWS. The chat aspect of the application via api.ai makes it a very simple way for women to interact with Women's Habitat without compromising their safety. The admin client app shows relevant analytics in a simple way that permits Women's Habitat employees to make better decisions based on user interaction with SARAH.
 
-#### Pitch Perfect: The pitch of the solution conveyed the problem, solution and feasibility.
+##### Pitch Perfect: The pitch of the solution conveyed the problem, solution and feasibility.
 + Problem: They were not getting enough donations, and wanted to expand into the younger demographics. We identified the key opportunity is to also capture reoccuring donations from the same donor. [Insert stat]
 + Solution: We identified key behaviours and trends among the young demographics ie. millennials. Millenials are mobile-oriented and therefore, we utilized SMS messaging along with Facebook messaging to provide value upon donation.
-    ..* Story: #25days4Her, create empathy, short story chapters, raise awareness and educate others, and subscription to further chapters and potential monthly donations
-    ..* Mobile payments: Text or Facebook messenger to create a seamless payment method.
++ Story: #25days4Her, create empathy, short story chapters, raise awareness and educate others, and subscription to further chapters and potential monthly donations
++ Mobile payments: Text or Facebook messenger to create a seamless payment method.
 + Feasibility: The entire cost of SARAH is $250/year. At a fixed donation of $5 per subscription period, it only requires 50 subscribers to breakeven. Because of the uniqueness, and shareability of the post and content, we see a consistent growth in following among the demographic. [Yr3: 11K]
 
-#### Design: The design of the solution was well thought out.
+##### Design: The design of the solution was well thought out.
 + Developers. Frontline/Backend. S.A.R.A.H.
 + Someone has to describe: sarah.com (From the admin standpoint, ESPECIALLY MANAGING DONATIONS VIA MOBILE)
 
-#### Innovation: The team has identified a unique way to solve the problem.
+##### Innovation: The team has identified a unique way to solve the problem.
 + Promoting Women’s Habitat services and providing companionship via S.A.R.A.H. to break the return cycle back to the shelter.
 + It’s innovative because it is easily accessible and private
 + Story campaign with mobile subscription & payment
 
-#### Pushing Tech: The team uses new technology (software and/ or hardware) to solve the problem.
+##### Pushing Tech: The team uses new technology (software and/ or hardware) to solve the problem.
 + This uses currently existing technology in combination with bot-mobile.
 
 ### Backend Architecture
-#### SMS Handler Architecture
+##### SMS Handler Architecture
 ![alt text](https://s3.amazonaws.com/sarah--gift-the-codeimages/SMSHandlerArchitecture.png  "SMS Handler Architecture")
 
-#### Admin Client AWS Schematic
+##### Admin Client AWS Schematic
 ![alt text](
 https://s3.amazonaws.com/sarah--gift-the-codeimages/AdminClientAWSSchematic.png  "Admin Client AWS Schematic")
