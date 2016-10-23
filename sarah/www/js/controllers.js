@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout, $state) {
 
-  
+
 
   $ionicPopover.fromTemplateUrl('templates/popover.html', {
     scope: $scope
@@ -177,17 +177,10 @@ angular.module('starter.controllers', [])
 
     {title: '#GiftTheCode', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'}];
 
-  $scope.selectedCommand = {
-    title: '',
-    description: '',
-    notes: '',
-    updated: '',
-    visible: false
-  }
+  $scope.selectedCommand = $scope.commands[0];
 
   $scope.edit = function(command) {
     $scope.selectedCommand = command;
-    $scope.selectedCommand.visible = true;
   }
 })
 
@@ -227,16 +220,10 @@ angular.module('starter.controllers', [])
   }
 ];
 
-  $scope.selectedCampaign = {
-    title: '',
-    number: '',
-    description: '',
-    visible: false
-  };
+  $scope.selectedCampaign = $scope.campaigns[0];
 
   $scope.edit = function(campaign) {
     $scope.selectedCampaign = campaign;
-    $scope.selectedCampaign.visible = true;
   };
 
   $scope.donations = [
