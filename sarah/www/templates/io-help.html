@@ -8,20 +8,15 @@
 <div class="row responsive-sm" id="row1-wrap">
   <div class="col" id="commands">
     <ion-list can-swipe="false">
-      <!-- href="#/app/playlists/{{playlist.id}}" -->
-      <ion-item class="item cmd-item" ng-repeat="command in commands">
-        <button class="button-info button-icon ion-edit"  ng-click="edit(command)">
-          <strong>{{command.title}}</strong>
-        </button>
-          <ion-option-button class="button-info button-icon ion-edit"  ng-click="edit(command)">
-          </ion-option-button>
+      <ion-item class="item cmd-item" ng-class="{'selected': command.title == selectedCommand.title}" ng-repeat="command in commands" ng-click="edit(command)">
+        <strong>{{command.title}}</strong>
     </ion-list>
   </div>
 
     <div class="card" id="command-desc">
       <span class="desc"><p><strong>{{selectedCommand.title}}</strong></p></span>
       <p>{{selectedCommand.description}}</p>
-    <div id="btn-container">
+    <div id="btn-container" ng-if="selectedCommand.visible">
       <button class="button button-small" id="edit-btn">
         Edit
       </button>
@@ -37,7 +32,7 @@
       </div>
       <div class="item last-edited">
         <p><strong>Last Edited</strong>
-          <br />March 24, 2016</p>
+          <br />{{selectedCommand.updated}}</p>
       </div>
     </div>
   </div>
