@@ -140,14 +140,6 @@ angular.module('starter.controllers', [])
 .controller('ReplyManagerCtrl', function($scope) {
   var lambda = new AWS.Lambda();
 
-  $scope.commands = [
-    {title: 'Employment', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'},
-    {title: 'Foodbank', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 25, 2016'},
-    {title: 'Housing', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'February 14, 2016'},
-    {title: 'Legal', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2006'},
-    {title: 'Safety', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'},
-    {title: 'Volunteer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', notes: 'Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', updated: 'March 24, 2016'}];
-
   $scope.selectedCommand = {
     Action: '',
     Response: '',
@@ -173,6 +165,34 @@ angular.module('starter.controllers', [])
 
         $scope.$apply(function() {
           $scope.actions = data.Actions;
+        });
+      };
+    });
+  };
+
+  $scope.$on("$ionicView.beforeEnter", function(event, data){
+    $scope.getActions();
+  });
+})
+
+
+
+.controller('ReplyHistoryCtrl', function($scope) {
+
+  var lambda = new AWS.Lambda();
+
+  $scope.getActions = function() {
+    var params = {
+      FunctionName: "getMessageLog"
+    };
+
+    lambda.invoke(params, function(err, data) {
+      if (err) console.log(err);
+      else {
+        data = JSON.parse(data.Payload);
+
+        $scope.$apply(function() {
+          $scope.records = data.Messages;
         });
       };
     });
@@ -276,20 +296,4 @@ angular.module('starter.controllers', [])
   { date: "2014-07-16", amount: "$64.02" },
   { date: "2015-09-16", amount: "$37.77" },
 ]
-})
-
-.controller('ReplyHistoryCtrl', function($scope) {
-  $scope.records = [
-    {
-      phoneNumber: '613-267-3704',
-      timestamp: 'October 22 2016',
-      received: 'received message',
-      sent: 'sent message'
-    },{
-      phoneNumber: '613-267-8858',
-      timestamp: 'October 21 2016',
-      received: 'lorem message',
-      sent: 'sent ipsum'
-    }
-  ]
 });
