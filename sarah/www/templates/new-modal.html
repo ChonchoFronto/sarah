@@ -1,0 +1,31 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Send a New Message</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModal()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <div class="item item-content">
+          <label class="item item-input">
+            <span class="input-label">Message</span>
+            <textarea style="width: 80%" placeholder="Message"></textarea>
+          </label>
+      </div>
+      <div class="item item-content">
+        <ion-checkbox ng-model="isChecked">Send on Date</ion-checkbox>
+            <label class="item item-input">
+              <span class="input-label">Date</span>
+              <input type="date" value="2016-10-23"/>
+            </label>
+        </div>
+
+        <div class="item item-content">
+          <button class="button button-dark" ng-click="closeModal()">Save</button>
+          <button class="button button-outline button-dark" ng-click="closeModal()">Cancel</button>
+        </div>
+      </div>
+
+  </ion-content>
+</ion-modal-view>
