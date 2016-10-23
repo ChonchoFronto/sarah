@@ -53,6 +53,10 @@ li {
   padding: 0.5em 0;
 }
 
+#sarah-img {
+  background: url('../imgs/logo/woman_generic.png');
+}
+
 #btn-container {
   text-align: right;
 }
@@ -72,10 +76,16 @@ li {
   margin: 0 auto;
 }
 
-#search-div {
+#search-div,
+#summary {
   margin: auto;
-  width: 90%;
+  width: 80%;
   text-align: center;
+}
+
+#dash-total {
+  margin: 0 auto;
+  width: 100%;
 }
 
 #commands {
@@ -163,9 +173,16 @@ li {
   #db-btn-div {
     max-width: 80%;
   }
-  #searchbar {
+  #searchbar,
+  #dash-total,
+  #avatar-card {
     margin: 0 auto;
     width: 90%;
+  }
+  #avatar {
+    margin: auto;
+    width: 80%;
+    text-align: center;
   }
   #db-btn {
     margin: auto;
@@ -229,8 +246,9 @@ li {
   #top-searches {
     margin: auto;
   }
-  #searchbar {
-    width: 80%;
+  #searchbar
+  #dash-total {
+    width: 75%;
   }
   #db-btn {
     width: 250px;
