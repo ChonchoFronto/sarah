@@ -76,15 +76,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.reply-summary', {
-    url: '/reply/summary',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/reply-summary.html'
-      }
-    }
-  })
-
   .state('app.history', {
     url: '/reply/history',
     views: {
