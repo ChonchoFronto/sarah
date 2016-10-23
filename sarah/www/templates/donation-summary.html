@@ -1,0 +1,35 @@
+<ion-view view-title="Analytics">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap" id="total-header">
+        <h1>Donations Summary</h1>
+        <br /><strong>${{totalAmount}}</strong>
+      </div>
+    </div>
+    <div class="row responsive-sm">
+
+      <div class="card totals">
+        <ion-list>
+          <ion-item class="item cmd-item"
+          ng-class="{'selected': campaign.title == selectedCampaign.title}"
+          ng-repeat="campaign in campaigns" ng-click="edit(campaign)">
+          <strong>{{campaign.title}}</strong></br>
+          {{campaign.number}}
+        </ion-list>
+      </div>
+      <div class="card" id="campaign-desc">
+        <p><strong>{{selectedCampaign.title}}</strong></p>
+        <p>{{selectedCampaign.description}}</p>
+      </div>
+
+      <ion-list class="list" id="live-count">
+        <ion-item class="item" ng-repeat="donation in donations">
+          <strong>Donation made:</strong></br>
+          {{donation.date}}</br>
+          ${{donation.amount}}
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
+</ion-view>

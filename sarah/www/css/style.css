@@ -1,1 +1,243 @@
 /* Empty. Add your own CSS if you like */
+/* Lindsay CSS */
+.my-menu {
+  background-color: #ffffff ;
+}
+
+.my-menu .list {
+  background-color: transparent;
+}
+
+.my-menu .item, .my-menu .item-content, .my-menu .item-complex{
+  background-color: transparent;
+  color: #000;
+}
+
+.login-card {
+  margin-left:25%;
+  margin-right:25%;
+}
+
+.list-logout .item, .list-logout .item-content, .list-logout .item-complex {
+  border-color: transparent;
+}
+
+.history-header {
+  font-weight: bold;
+  background-color: #bdc3c7;
+    border: 1px solid #bdc3c7;
+}
+
+.history-body {
+  border: 1px solid #bdc3c7;
+}
+
+
+/* Jiannine CSS */
+.selected {
+  background-color: #bdc3c7;
+  -moz-box-shadow:    inset 0 0 10px #777;
+  -webkit-box-shadow: inset 0 0 10px #777;
+  box-shadow:         inset 0 0 10px #777;
+}
+
+#reply-manager,
+#total-header {
+  text-align: center;
+  background-color: #69b3b7;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+  padding: 0.5em 0;
+}
+
+#btn-container {
+  text-align: right;
+}
+
+#edit-btn {
+  background-color: #69b3b7;
+  width: 100px;
+}
+
+#db-btn-div {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+
+#db-btn {
+  margin: 0 auto;
+}
+
+#search-div {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+
+#commands {
+  /*border: 1px solid black;*/
+  text-align: center;
+  padding: 0;
+  margin-right: 0.5em;
+}
+
+#right-contain {
+  border: 1px solid black;
+  width: 25%;
+  float: left;
+  padding: 0.5em;
+}
+
+#command-desc {
+  /*border:1px solid blue;*/
+  margin: 0;
+}
+
+#notes {
+  /*border: 1px solid red;*/
+}
+
+#last-edited {
+  /*border: 1px solid black;*/
+}
+
+#live-count {
+  width: 100%;
+}
+
+#command-desc,
+#campaign-desc,
+.notes,
+.last-edited {
+  /*margin-bottom: 1em;*/
+  padding: 1em;
+}
+
+.totals {
+  text-align: center;
+}
+
+
+
+@media screen and (min-width: 576px) {
+  #commands {
+    float: left;
+    max-width: 30%;
+    text-align: center;
+  }
+  #command-desc {
+    float: right;
+    width: 70%;
+  }
+  #campaign-desc {
+    width: 50%;
+    padding: 1em;
+  }
+  #live-count {
+    width: 30%;
+    padding: 0.5em;
+    margin-top: 1em;
+  }
+  /*.notes,
+  .last-edited {
+    clear: both;
+  }*/
+  .totals {
+    width: 45%;
+    text-align: center;
+  }
+  #dash-row1,
+  #dash-row2 {
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #top-searches {
+    width: 50%;
+    margin: auto;
+  }
+  #db-btn-div {
+    max-width: 80%;
+  }
+  #searchbar {
+    margin: 0 auto;
+    width: 90%;
+  }
+  #db-btn {
+    margin: auto;
+    width: 150px;
+  }
+  #new-keywords {
+    width: 50%;
+    text-align: center;
+  }
+  #new-descrip {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #dash-row1 {
+    max-width: 75%;
+    text-align: center;
+    margin: auto;
+  }
+  #row1-wrap,
+  #row2-wrap {
+    max-width: 65%;
+    margin: 0 auto;
+  }
+  #commands {
+    float: left;
+    max-width: 25%;
+    text-align: center;
+  }
+  #command-desc {
+    float: right;
+    width: 75%;
+    padding: 3em;
+  }
+  #campaign-desc {
+    width: 70%;
+    padding: 2.5em;
+  }
+  #live-count {
+    width: 40%;
+    height: 100%;
+    margin: 1em auto;
+  }
+  #internal-notes {
+    width: 100%;
+  }
+  .notes,
+  .last-edited {
+    clear: both;
+  }
+  .totals {
+    width: 50%;
+    text-align: center;
+  }
+  #campaign-desc,
+  #live-count,
+  .totals {
+    display: inline-block;
+  }
+  #top-searches {
+    margin: auto;
+  }
+  #searchbar {
+    width: 80%;
+  }
+  #db-btn {
+    width: 250px;
+  }
+
+  #new-descrip p {
+    max-width: 60%;
+    margin: auto;
+  }
+}
