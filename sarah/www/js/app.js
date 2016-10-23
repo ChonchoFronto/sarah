@@ -84,7 +84,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/io/donations',
     views: {
       'menuContent': {
-        templateUrl: 'templates/io-donations.html'
+        templateUrl: 'templates/io-donations.html',
+        controller: 'DonationsCtrl'
       }
     }
   })

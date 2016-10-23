@@ -1,59 +1,40 @@
 <ion-view view-title="Reply Manager">
   <ion-content>
     <div class="card">
-      <div class="item item-text-wrap" id="total-header">
-        <h1>Total Donations</h1>
-        <br /><strong>$14,664</strong>
+      <div class="item item-text-wrap" id="reply-manager">
+        <h1>Donations Manager</h1>
       </div>
     </div>
-    <div class="row responsive-sm">
-
-      <div class="card totals">
-        <!-- <div class="item">
-
-      </div> -->
-      <div class="item">
-        <p><strong>Campaign 1</strong>
-          <br />2344</p>
+    <div class="row responsive-sm" id="row1-wrap">
+      <div class="col" id="commands">
+          <ion-list>
+            <ion-item class="item cmd-item" ng-class="{'selected': command.title == selectedCommand.title}" ng-repeat="command in commands" ng-click="edit(command)">
+              <strong>{{command.title}}</strong>
+          </ion-list>
+        </ul>
+      </div>
+      <div class="card" id="command-desc">
+        <span class="desc"><p><strong>{{selectedCommand.title}}</strong></p></span>
+        <p>{{selectedCommand.description}}</p>
+        <div id="btn-container" ng-if="selectedCommand.visible">
+          <button class="button button-small" id="edit-btn">
+            Edit
+          </button>
         </div>
-        <div class="item">
-          <p><strong>Campaign 2</strong>
-            <br />5434</p>
-          </div>
-          <div class="item">
-            <p><strong>Campaign 3</strong>
-              <br />3352</p>
-            </div>
-            <div class="item">
-              <p><strong>Campaign 4</strong>
-                <br />3534</p>
-              </div>
-            </div>
-            <div class="card" id="campaign-desc">
-              <p><strong>Campaign 1 Description</strong></p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <ul class="list" id="live-count">
-              <li class="item"><p><strong>Donation made</strong>
-                <br />March 20 2016
-                <br />$50
-              </p>
-            </li>
-            <li class="item"><p><strong>Donation made</strong>
-              <br />March 20 2016
-              <br />$40
-            </p>
-          </li>
-          <li class="item"><p><strong>Donation made</strong>
-            <br />March 20 2016
-            <br />$70
-          </p>
-        </li>
-      </ul>
-    </div>
-    <div class="row responsive-sm responsive-md">
 
+      </div>
     </div>
-  </div>
-</ion-content>
-</ion-view>
+    <div class="row responsive-sm" id="row2-wrap">
+      <div class="list card" id="internal-notes">
+        <div class="item notes">
+          <p><strong>Internal Notes</strong>
+            <br />{{selectedCommand.notes}}</p>
+          </div>
+          <div class="item last-edited">
+            <p><strong>Last Edited</strong>
+              <br />{{selectedCommand.updated}}</p>
+            </div>
+          </div>
+        </div>
+      </ion-content>
+    </ion-view>

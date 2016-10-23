@@ -7,7 +7,7 @@
 </div>
 <div class="row responsive-sm" id="row1-wrap">
   <div class="col" id="commands">
-    <ion-list can-swipe="false">
+    <ion-list>
       <ion-item class="item cmd-item" ng-class="{'selected': command.title == selectedCommand.title}" ng-repeat="command in commands" ng-click="edit(command)">
         <strong>{{command.title}}</strong>
     </ion-list>
