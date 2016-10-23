@@ -47,7 +47,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/dashboard',
     views: {
       'menuContent': {
-        templateUrl: 'templates/dashboard.html'
+        templateUrl: 'templates/dashboard.html',
+        controller: 'DashboardCrtl'
       }
     }
   })
@@ -105,6 +106,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: 'templates/donation-summary.html',
+        controller: 'DonationSummaryCtrl'
       }
     }
   })

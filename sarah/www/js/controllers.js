@@ -62,22 +62,8 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
-
-
-.controller('OptionsCtrl', function($scope) {
+.controller('DashboardCrtl', function($scope) {
     $scope.settings = [
         { icon: 'ion-ios-search', title: "Search"},
         { icon: 'ion-gear-b', title: "Settings"},
@@ -134,6 +120,70 @@ angular.module('starter.controllers', [])
     $scope.selectedCommand = command;
     $scope.selectedCommand.visible = true;
   }
+})
+
+.controller('DonationSummaryCtrl', function($scope) {
+  $scope.totalAmount = '14,664';
+
+  $scope.campaigns = [
+    {
+      title: 'General',
+      number: '2344',
+      description: 'desk'
+    },
+    {
+      title: '#25Days4Her',
+      number: '5455',
+      description: 'table'
+    },
+    {
+      title: 'Tea for Teens',
+      number: '101',
+      description: 'chair'
+    },
+    {
+      title: 'Capital Campaign Gala',
+      number: '5433',
+      description: 'sofa'
+    },
+    {
+      title: 'Shoppers Drug Mart',
+      number: '101000',
+      description: 'couch'
+    },
+    {
+      title: 'GiftTheCode',
+      number: '5433',
+      description: 'banana'
+    }
+  ];
+
+  $scope.selectedCampaign = {
+    title: '',
+    number: '',
+    description: '',
+    visible: false
+  };
+
+  $scope.edit = function(campaign) {
+    $scope.selectedCampaign = campaign;
+    $scope.selectedCampaign.visible = true;
+  };
+
+  $scope.donations = [
+    {
+      date: 'March 20 2016',
+      amount: 50
+    },
+    {
+      date: 'March 17 2016',
+      amount: 40
+    },
+    {
+      date: 'March 16 2016',
+      amount: 70
+    }
+  ]
 })
 
 .controller('ReplyHistoryCtrl', function($scope) {

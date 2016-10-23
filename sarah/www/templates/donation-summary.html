@@ -3,65 +3,33 @@
     <div class="card">
       <div class="item item-text-wrap" id="total-header">
         <h1>Donations Summary</h1>
-        <br /><strong>$14,664</strong>
+        <br /><strong>${{totalAmount}}</strong>
       </div>
     </div>
     <div class="row responsive-sm">
 
       <div class="card totals">
-        <!-- <div class="item">
-
-      </div> -->
-      <div class="item">
-        <p><strong>General</strong>
-          <br />2344</p>
-        </div>
-        <div class="item">
-          <p><strong>#25DaysForHer</strong>
-            <br />5434</p>
-          </div>
-          <div class="item">
-            <p><strong>Tea for Teens</strong>
-              <br />3352</p>
-            </div>
-            <div class="item">
-              <p><strong>Capital Campaign Gala</strong>
-                <br />3534</p>
-              </div>
-              <div class="item">
-                <p><strong>Shoppers Drug Mart</strong>
-                  <br />2534</p>
-                </div>
-                <div class="item">
-                  <p><strong>#GiftTheCode</strong>
-                    <br />2344</p>
-                  </div>
-                </div>
-                <div class="card" id="campaign-desc">
-                  <p><strong>Campaign 1 Description</strong></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <ul class="list" id="live-count">
-                  <li class="item"><p><strong>Donation made</strong>
-                    <br />March 20 2016
-                    <br />$50
-                  </p>
-                </li>
-                <li class="item"><p><strong>Donation made</strong>
-                  <br />March 20 2016
-                  <br />$40
-                </p>
-              </li>
-              <li class="item"><p><strong>Donation made</strong>
-                <br />March 20 2016
-                <br />$70
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div class="row responsive-sm responsive-md">
-
-        </div>
+        <ion-list>
+          <ion-item class="item cmd-item"
+          ng-class="{'selected': campaign.title == selectedCampaign.title}"
+          ng-repeat="campaign in campaigns" ng-click="edit(campaign)">
+          <strong>{{campaign.title}}</strong></br>
+          {{campaign.number}}
+        </ion-list>
       </div>
-    </ion-content>
-  </ion-view>
+      <div class="card" id="campaign-desc">
+        <p><strong>{{selectedCampaign.title}}</strong></p>
+        <p>{{selectedCampaign.description}}</p>
+      </div>
+
+      <ion-list class="list" id="live-count">
+        <ion-item class="item" ng-repeat="donation in donations">
+          <strong>Donation made:</strong></br>
+          {{donation.date}}</br>
+          ${{donation.amount}}
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
+</ion-view>
