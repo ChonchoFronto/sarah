@@ -1,14 +1,9 @@
-<ion-view view-title="Reply Manager">
+<ion-view view-title="Donation Manager">
   <ion-content>
-    <div class="card">
-      <div class="item item-text-wrap" id="reply-manager">
-        <h1>Donations Manager</h1>
-      </div>
-    </div>
     <div class="row responsive-sm" id="row1-wrap">
       <div class="col" id="commands">
           <ion-list>
-            <ion-item class="item cmd-item" 
+            <ion-item class="item cmd-item"
               ng-class="{'selected': command.title == selectedCommand.title}"
               ng-repeat="command in commands" ng-click="edit(command)">
               <strong>{{command.title}}</strong>
