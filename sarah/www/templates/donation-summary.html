@@ -15,13 +15,15 @@
         <p>{{selectedCampaign.description}}</p>
       </div>
 
+
       <ion-list class="list" id="live-count">
         <ion-item class="item" ng-repeat="donation in donations">
-          <strong>Donation made:</strong></br>
+          <strong>Donation made</strong></br>
           {{donation.date}}</br>
           {{donation.amount}}
         </ion-item>
       </ion-list>
+
     </div>
   </div>
 </ion-content>

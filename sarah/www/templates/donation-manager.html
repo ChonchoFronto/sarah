@@ -1,8 +1,12 @@
 <ion-view view-title="Donation Manager">
   <ion-content>
+
     <div class="row responsive-sm" id="row1-wrap">
       <div class="col" id="commands">
           <ion-list>
+            <ion-item class="item cmd-item" style="background-color:#69b3b7;" ng-click="openModal()">
+              Send Message
+            </ion-item>
             <ion-item class="item cmd-item"
               ng-class="{'selected': command.title == selectedCommand.title}"
               ng-repeat="command in commands" ng-click="edit(command)">
