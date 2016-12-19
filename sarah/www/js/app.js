@@ -21,7 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
 
     //Set aws credentials. This user only has permissions to invoke the relevant Lambda functions
-    AWS.config.update({accessKeyId: 'AKIAIP5SH43Y3PILQHKA', secretAccessKey: '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'});
+    AWS.config.update({accessKeyId: 'XXXXXXXXXXXXX', secretAccessKey: 'XXXXXXXXXXXXX'});
     AWS.config.region = 'us-east-1';
   });
 })
